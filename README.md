@@ -158,6 +158,7 @@ La URL y el nombre del modelo salen en la sección 8 del notebook.
 | `No space left on device` | Reinicia la sesión de Kaggle; el disco vuelve limpio |
 | La sección 8 no encuentra la URL del túnel | `cloudflared` no está o falló: comprueba `~/.local/bin/cloudflared --version`. El modelo sigue disponible en `127.0.0.1` |
 | La URL pública responde 401 | Falta la API key en el cliente: `strata launch --show-key` y mándala en `Authorization: Bearer …` |
+| Sección 6: «el proceso arrancó pero `/v1/models` no responde» | El servidor sí está sirviendo, pero `/v1/models` exige key incluso en `127.0.0.1`: el notebook la lee solo con `strata launch --show-key` (o `STRATA_API_KEY`). Comprueba también que el error no sea 401 en `strata.log` |
 | El puerto 8080 está ocupado | Ejecuta la sección 12 (`--stop`) o reinicia la sesión. La sección 6 no relanza si ya hay servidor |
 | Respuestas peores de lo esperado | Es un pack de ~1 bit con la mitad de expertos: es el precio de que quepa. Para código rinde; fuera de código es más flojo |
 
