@@ -1,0 +1,14 @@
+# Salidas del notebook
+strata.log
+*.svg
+/kaggle/
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+
+# Sistema
+.DS_Store
+Thumbs.db
